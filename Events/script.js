@@ -61,6 +61,7 @@ const backgroundcolor = () => {
   
 }
 
+
 const randomcolor = () => {
   const letters =  '0123456789ABCDEF';
   let color = '#';
@@ -69,7 +70,9 @@ const randomcolor = () => {
   }
   return color;
 }
-  
+
+
+
 
 // const clearLog = () => {
 //   while ( unOrderedList.)
@@ -104,12 +107,44 @@ const randomcolor = () => {
     console.log(getElapsedTime())
     }
     
+    }
+
+    const deleteList = (e) => {
+      if (e.key === 'l') {
+        const allLogs = document.querySelectorAll('ul');
+        // const li = document.querySelectorAll('li');
+        allLogs.forEach(function(item) {
+          item.remove();
+          
+        });
+ 
+      }
+      
 
     }
-   
+
+
+
+    const delGenSquares = (e) => {
+      if (e.key === 's') {
+        const gensquares = document.querySelectorAll('.displayedsquare-wrapper');
+        gensquares.forEach(function(item) {
+          item.remove();
+          
+        });
+ 
+      }
+      
+
+    }
+
+    
+      
+    
 
 // }
-
+document.body.addEventListener('keypress', delGenSquares);
+document.body.addEventListener('keypress', deleteList);
 document.body.addEventListener('keypress', press);
 
 console.log('a key was pressed')
