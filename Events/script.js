@@ -47,3 +47,69 @@ and the corresponding clicked color in the div above (`.displayedsquare-wrapper`
 //   } )
   
 // });
+
+// const space = (press) => {
+  const body = document.querySelector('body')
+
+
+  // test
+// body.style.backgroundColor = 'pink';
+
+const backgroundcolor = () => {
+  const changeColor = randomcolor();
+  body.style.backgroundColor = changeColor;
+  
+}
+
+const randomcolor = () => {
+  const letters =  '0123456789ABCDEF';
+  let color = '#';
+  for ( i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random()*16)];
+  }
+  return color;
+}
+  
+
+// const clearLog = () => {
+//   while ( unOrderedList.)
+// }
+
+  const press = (e) => {
+    
+    if (e.key == ' '){
+      backgroundcolor();
+      console.log('testing', press); 
+
+      
+    const unOrderedList2 = document.querySelector('ul');
+    const timelog = getElapsedTime();
+    // 2) create a new div 
+    const newDiv2 = document.createElement('div');
+    const list2 = document.createElement('li');
+    // e = clickOnSquare
+    ;
+    
+    newDiv2.classList.add('presedSpace');
+    newDiv2.appendChild(list2);
+  
+    // this is a string with the variables included to display 
+    list2.textContent = `[${timelog}] spacebar was pressed!`;
+    unOrderedList2.appendChild(list2);
+  
+  
+  
+   console.log(e.target.classList[1])
+  
+    console.log(getElapsedTime())
+    }
+    
+
+    }
+   
+
+// }
+
+document.body.addEventListener('keypress', press);
+
+console.log('a key was pressed')
