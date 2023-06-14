@@ -47,4 +47,25 @@ const hardTruth = document.getElementById('a-hard-truth')
 
 
 
+//Add a keyup listener on both fields 
+//and show a visual hint (for instance turn the field red)
+// if the password is too short (less than 6 characters)
+// or if the password and its confirmation do not match.
+ 
 
+const password1 = document.getElementById('pwd')
+const password2 = document.getElementById('pwd-confirm')
+
+const passwordVerifier = (e) => {
+  if ( password1.value.length < 6 || password1.value != password2.value)  {
+    password1.style.backgroundColor ='pink' 
+    // password2.style.backgroundColor ='pink'
+  }
+  else {password1.style.backgroundColor ='white' 
+  password2.style.backgroundColor ='white'
+  
+  }
+} 
+
+password1.addEventListener( 'keyup' , passwordVerifier  )
+password2.addEventListener( 'keyup' ,  passwordVerifier )
