@@ -56,16 +56,16 @@
 /*  3) first part selects elements
        second part allows us to display the selected element
 */
-// const paragraphs = document.querySelectorAll('p') 
+ const paragraphs = document.querySelectorAll('p') 
 
-// for(let i=0; i< paragraphs.length; i++){
+for(let i=0; i< paragraphs.length; i++){
 
-//     console.log(paragraphs[i]) 
-//     if(paragraphs[i].classList.contains(".class")){
-//         paragraphs[i].style.display=".class";
-//     }
-// }
-
+    console.log(paragraphs[i]) 
+    if(paragraphs[i].classList.contains(".class")){
+        paragraphs[i].style.display=".class";
+    }
+}
+console.log("class");
 
 
 

@@ -12,26 +12,29 @@ const clickOnSquare = (e) => {
   // 2) create a new div 
   const newDiv = document.createElement('div');
   const list = document.createElement('li');
-  // e = clickOnSquare
+  // e = clickOnSquare and displays new one
   const colors = e.target.classList[1];
-  
+ 
+
+
+ 
   newDiv.classList.add('displayedsquare', colors);
   displayWrapper.appendChild(newDiv);
 
   // this is a string with the variables included to display 
   list.textContent = `[${timelog}] created a new ${colors} square`;
   unOrderedList.appendChild(list);
-
-
-
+  
  console.log(e.target.classList[1])
 
   console.log(getElapsedTime())
+
 }
 
 const actionSquares = document.querySelectorAll('.actionsquare')
 for (let actionSquare of actionSquares) {
   actionSquare.addEventListener('click', clickOnSquare)
+  
 }
 
 /*   - Create a new `<div>` with a class `.displayedsquare` 
@@ -58,8 +61,10 @@ and the corresponding clicked color in the div above (`.displayedsquare-wrapper`
 const backgroundcolor = () => {
   const changeColor = randomcolor();
   body.style.backgroundColor = changeColor;
+
   
 }
+
 
 
 const randomcolor = () => {
@@ -148,3 +153,18 @@ document.body.addEventListener('keypress', deleteList);
 document.body.addEventListener('keypress', press);
 
 console.log('a key was pressed')
+
+const displayWrapper = document.querySelector('.displayedsquare-wrapper');
+
+displayWrapper.addEventListener("click", (e) => {
+  const targetElement = e.target;
+  if (targetElement.classList.contains('displayedsquare')) {
+    const squareColor = targetElement.classList[1].split('-')[1];
+    alert(`The color of the square is ${squareColor}`);
+  }
+});  
+
+// finished
+
+
+

@@ -33,17 +33,17 @@
 
 
 
-// var mainElement = document.querySelector("main");
-// var lastSection = mainElement.lastElementChild;
+var mainElement = document.querySelector("main");
+var lastSection = mainElement.lastElementChild;
 
-// if (lastSection) {
-//   mainElement.removeChild(lastSection);
+if (lastSection) {
+  mainElement.removeChild(lastSection);
 
-// }
+}
 
 // vs 
-// Select all <section> tags
-let sections = document.querySelectorAll('section');
+// // Select all <section> tags
+// let sections = document.querySelectorAll('section');
 
-// Remove the last <section> from the document
-sections[sections.length - 1].remove();
+// // Remove the last <section> from the document
+// sections[sections.length - 1].remove();
