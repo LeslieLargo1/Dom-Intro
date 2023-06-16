@@ -69,3 +69,32 @@ const passwordVerifier = (e) => {
 
 password1.addEventListener( 'keyup' , passwordVerifier  )
 password2.addEventListener( 'keyup' ,  passwordVerifier )
+
+
+
+//Finally, use a 'change' listener on the <select> field
+// to toggle a dark mode on the whole page.
+// turning the background black and the text white.
+
+
+const theme = (e) => {
+  const themechange = e.target.value;
+  const body = document.querySelector("body")
+  body.style.backgroundColor = "white"
+
+if (themechange === "light") {
+  body.style.backgroundColor ="white"
+  body.style.color = "black"
+}
+else{
+  body.style.backgroundColor = "black"
+  body.style.color = "white"
+}
+
+}
+const switchScreen = document.getElementById("toggle-darkmode")
+ switchScreen.addEventListener("change", theme)
+
+
+
+
